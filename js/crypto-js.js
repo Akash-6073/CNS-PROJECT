@@ -16,6 +16,9 @@
 	/**
 	 * CryptoJS core components.
 	 */
+
+	// Initializes and sets up the CryptoJS library by defining objects and methods.
+	// This particular function defines various objects and methods for handling cryptographic operations, such as encoding, hashing, and creating word arrays.
 	var CryptoJS = CryptoJS || (function (Math, undefined) {
 	    /*
 	     * Local polyfil of Object.create
@@ -35,20 +38,10 @@
 	            return subtype;
 	        };
 	    }())
-
-	    /**
-	     * CryptoJS namespace.
-	     */
 	    var C = {};
 
-	    /**
-	     * Library namespace.
-	     */
 	    var C_lib = C.lib = {};
 
-	    /**
-	     * Base object for prototypal inheritance.
-	     */
 	    var Base = C_lib.Base = (function () {
 
 
@@ -755,6 +748,7 @@
 	}(Math));
 
 
+	// This function provides functionalities for encoding and decoding data using the Base64 encoding scheme. Here's what it does in simpler terms:
 	(function () {
 	    // Shortcuts
 	    var C = CryptoJS;
@@ -872,6 +866,8 @@
 	}());
 
 
+	// Implements the MD5 Hash Algorithm
+	// Overall, this function allows for the creation of MD5 hash digests from input messages, which are commonly used for data integrity verification, password hashing.
 	(function (Math) {
 	    // Shortcuts
 	    var C = CryptoJS;
@@ -1122,6 +1118,8 @@
 	}(Math));
 
 
+	// SHA - 1 Hash Algorithm
+	// This function implements the SHA-1 hashing algorithm, which is used to generate a fixed-size hash value from input data.
 	(function () {
 	    // Shortcuts
 	    var C = CryptoJS;
@@ -1254,6 +1252,8 @@
 	}());
 
 
+
+	// SHA - 256 Hash Algorrithm
 	(function (Math) {
 	    // Shortcuts
 	    var C = CryptoJS;
@@ -1623,18 +1623,6 @@
 	    subInit.prototype = WordArray;
 	}());
 
-
-	/** @preserve
-	(c) 2012 by Cédric Mesnil. All rights reserved.
-
-	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-
-	    - Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-	    - Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-
-	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-	*/
-
 	(function (Math) {
 	    // Shortcuts
 	    var C = CryptoJS;
@@ -1873,6 +1861,7 @@
 	}(Math));
 
 
+	// HMAC Algorithm
 	(function () {
 	    // Shortcuts
 	    var C = CryptoJS;
@@ -2000,6 +1989,7 @@
 	}());
 
 
+	// SHA
 	(function () {
 	    // Shortcuts
 	    var C = CryptoJS;
@@ -2241,6 +2231,7 @@
 	}());
 
 
+	// SHA - 224
 	(function () {
 	    // Shortcuts
 	    var C = CryptoJS;
@@ -2893,7 +2884,7 @@
 	    C.HmacSHA3 = Hasher._createHmacHelper(SHA3);
 	}(Math));
 
-
+	// SHA - 512
 	(function () {
 	    // Shortcuts
 	    var C = CryptoJS;
@@ -3198,7 +3189,7 @@
 	    C.HmacSHA512 = Hasher._createHmacHelper(SHA512);
 	}());
 
-
+	// SHA - 384
 	(function () {
 	    // Shortcuts
 	    var C = CryptoJS;
@@ -5315,17 +5306,20 @@
 	            var keyWords = key.words;
 
 	            // Create DES instances
+				// Create 3 secret keys
 	            this._des1 = DES.createEncryptor(WordArray.create(keyWords.slice(0, 2)));
 	            this._des2 = DES.createEncryptor(WordArray.create(keyWords.slice(2, 4)));
 	            this._des3 = DES.createEncryptor(WordArray.create(keyWords.slice(4, 6)));
 	        },
 
+			// Encryption
 	        encryptBlock: function (M, offset) {
 	            this._des1.encryptBlock(M, offset);
 	            this._des2.decryptBlock(M, offset);
 	            this._des3.encryptBlock(M, offset);
 	        },
 
+			// Decryption
 	        decryptBlock: function (M, offset) {
 	            this._des3.decryptBlock(M, offset);
 	            this._des2.encryptBlock(M, offset);
@@ -5350,7 +5344,7 @@
 	    C.TripleDES = BlockCipher._createHelper(TripleDES);
 	}());
 
-
+	// RC4 - Algorithm
 	(function () {
 	    // Shortcuts
 	    var C = CryptoJS;
@@ -5472,11 +5466,7 @@
 	}());
 
 
-	/** @preserve
-	 * Counter block mode compatible with  Dr Brian Gladman fileenc.c
-	 * derived from CryptoJS.mode.CTR
-	 * Jan Hruby jhruby.web@gmail.com
-	 */
+ 
 	CryptoJS.mode.CTRGladman = (function () {
 	    var CTRGladman = CryptoJS.lib.BlockCipherMode.extend();
 

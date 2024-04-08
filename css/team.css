@@ -23,6 +23,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
+  height: 80vh;
 }
 .card {
   margin: 25px;
