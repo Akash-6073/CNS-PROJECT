@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/exo2/v18/7cH1v4okm5zmbvwkAx_sfcEuiD8j4PKsOdC6.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/exo2/v18/7cH1v4okm5zmbvwkAx_sfcEuiD8jvvKsOdC6.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/exo2/v18/7cH1v4okm5zmbvwkAx_sfcEuiD8jjPKsOdC6.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/exo2/v18/7cH1v4okm5zmbvwkAx_sfcEuiD8jWfWsOdC6.ttf)
+    format("truetype");
+}
+body {
+  background: white;
+  font-family: "Exo 2";
+}
+.zone {
+  margin: auto;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  bottom: 0;
+  right: 40%;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  width: 40%;
+  height: 50%;
+  text-align: center;
+  color: white;
+  z-index: 20;
+  transition: all 0.3s ease-out;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: black !important;
+  font-weight: bold;
+}
+textarea {
+  resize: none;
+  outline: none;
+  cursor: auto;
+  border: 0;
+  padding: 5px;
+}
+.foot {
+  bottom: 0;
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  color: white;
+  text-align: center;
+  opacity: 1 !important;
+  padding: 5px 0;
+}
+
+.zone-image {
+  margin: auto;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  width: 450px;
+  height: 450px;
+  text-align: center;
+  color: white;
+  z-index: 20;
+  transition: all 0.3s ease-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+img {
+  border: 0 !important;
+  border-radius: 15px;
+  box-shadow: 0 4px 102px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.zone .btnCompression .active {
+  background: #eb6a5a;
+  color: white;
+}
+.zone i {
+  text-align: center;
+  font-size: 10em;
+  color: #fff;
+  margin-top: 50px;
+}
+.zone .selectFile {
+  height: 50px;
+  margin: 20px auto;
+  position: relative;
+  width: 200px;
+  color: black !important;
+}
+.zone label,
+.zone input {
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border-radius: 5px;
+}
+.zone label {
+  background: #fff;
+  color: black;
+  display: inline-block;
+  font-size: 1.2em;
+  line-height: 50px;
+  padding: 0;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 400;
+  box-shadow: 0 1px 1px gray;
+}
+.zone input[type="file"] {
+  opacity: 0;
+}
+.zone.in {
+  color: white;
+  border-color: white;
+  background: radial-gradient(ellipse at center, #eb6a5a 0, #c9402f 100%);
+}
+.zone.in i {
+  color: #fff;
+}
+.zone.in label {
+  background: #fff;
+  color: #eb6a5a;
+}
+.zone.hover {
+  color: gray;
+  border-color: white;
+  background: #fff;
+  border: 5px dashed gray;
+}
+.zone.hover i {
+  color: #eb6a5a;
+}
+.zone.hover label {
+  background: #fff;
+  color: #eb6a5a;
+}
+.zone.fade {
+  transition: all 0.3s ease-out;
+  opacity: 1;
+}
+
+#dropZ {
+  margin-top: 21%;
+}
+
+#title {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 60px;
+}
+
+label {
+  position: absolute;
+  top: 83%;
+  /* right: 3.7%; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+input[type="text"] {
+  border: none;
+  width: 250px;
+  height: 40px;
+  padding: 0 10px;
+  border: 0;
+  outline: none;
+  border-radius: 25px 0px 0 25px;
+}
+button {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  background: black;
+  color: white;
+  padding: 0 10px;
+  letter-spacing: 1.2px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  height: 40px;
+  border-radius: 0 25px 25px 0px;
+}
+
+.result {
+  position: relative;
+  top: 5%;
+}
+.selectFile:active {
+  transform: scale(0.5);
+  transition: all 0.5s;
+}
