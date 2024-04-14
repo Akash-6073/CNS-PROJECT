@@ -27,16 +27,22 @@
   height: 80vh;
 }
 .card {
-  margin: 25px;
+  margin: 35px;
+  box-shadow: 10px 10px 5px 12px rgba(128, 128, 128, 0.297)  ;
+
 }
 .card-title {
   font-size: 1.5rem;
+  padding: 10px 0;
 }
 
 .card-body {
   padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
+.card-body h2{
+  color: rgba(39, 38, 38, 0.737);
+}
 .card-img-top {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
